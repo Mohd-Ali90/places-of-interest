@@ -56,4 +56,4 @@ Places of Interest - Travel/Tourism board
 
 ## Credits
 1. https://gist.github.com/keeguon/2310008 Used for list of countries
-2. Google search for the code to seed the country database (mongoose.connect , deletemany , insertmany)
+2. https://www.w3schools.com/tags/tag_option.asp used for options tag

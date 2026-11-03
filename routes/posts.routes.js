@@ -22,4 +22,9 @@ const createdPost = await Post.create({
 res.redirect('/Posts')
 })
 
+router.get('/',isSignedIn,async(req,res)=>{
+const allPosts = await Post.find().populate('owner')
+res.render('posts/all-posts.ejs',{posts: allPosts})
+})
+
 module.exports = router;
