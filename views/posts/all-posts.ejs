@@ -8,6 +8,10 @@
 <%- include('../partials/navbar') %>
 <h1>All posts page</h1>
 <body>
+    <% for(let onePost of posts) { %>
+        <p> <%= onePost.title  %> by <%= onePost.owner.username %> </p>
+        <a href="/posts/<%= onePost._id  %>">See details of this post</a>
+        <% } %>
     
 </body>
 </html>
