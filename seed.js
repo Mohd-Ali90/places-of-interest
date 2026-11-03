@@ -2,6 +2,7 @@ const mongoose = require('mongoose')
 const Country = require('./models/Country')
 
 // const MONGO_URI = 
+//
 
 const seedCountries=[ 
   {countryName: 'Afghanistan'}, 
