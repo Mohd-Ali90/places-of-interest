@@ -40,10 +40,10 @@ Places of Interest - Travel/Tourism board
 | GET | /posts | List all posts |
 | GET | /post/new | New post form |
 | POST | /posts | Create post |
-| GET | /posts/:id | View post |
-| GET | /posts/:id/edit | Edit post form |
-| PUT | /posts/:id | Update post |
-| DELETE | /posts/:id | Delete post |
+| GET | /posts/:postId | View post |
+| GET | /posts/:postId/edit | Edit post form |
+| PUT | /posts/:postId | Update post |
+| DELETE | /posts/:postId | Delete post |
 
 
 ## Features

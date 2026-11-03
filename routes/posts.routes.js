@@ -27,4 +27,9 @@ const allPosts = await Post.find().populate('owner')
 res.render('posts/all-posts.ejs',{posts: allPosts})
 })
 
+router.get('/:postId', isSignedIn , async (req,res)=>{
+    const foundPost= await Post.findById(req.params.postId).populate('owner')
+    res.render('posts/details.ejs',{post:foundPost})
+})
+
 module.exports = router;
