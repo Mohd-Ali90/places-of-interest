@@ -33,4 +33,13 @@ router.get('/:postId', isSignedIn , async (req,res)=>{
     res.render('posts/details.ejs',{post:foundPost})
 })
 
+router.delete('/:postId', isSignedIn, async (req,res)=>{
+    const foundPost =await Post.findById(req.params.postId)
+    if (!foundPost.owner.equals(req.session.user._id)){
+        return res.send('Action not allowed')
+    }
+    await Post.findByIdAndDelete(req.params.postId)
+    res.redirect('/posts')
+})
+
 module.exports = router;
