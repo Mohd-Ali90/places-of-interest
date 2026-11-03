@@ -55,4 +55,5 @@ Places of Interest - Travel/Tourism board
 
 
 ## Credits
-https://gist.github.com/keeguon/2310008 Used for list of countries
+1. https://gist.github.com/keeguon/2310008 Used for list of countries
+2. Google search for the code to seed the country database (mongoose.connect , deletemany , insertmany)
