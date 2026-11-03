@@ -30,7 +30,7 @@ Places of Interest - Travel/Tourism board
 
 ## Database Design
 
-![ERD diagram](image-2.png)
+![ERD diagram](image.png)
 
 ## Routes
 
