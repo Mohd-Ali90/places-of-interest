@@ -8,5 +8,31 @@
 <body>
     <%- include('../partials/navbar') %>
     <h1>Create New Post</h1>
+
+    <form action="/posts" method="post">
+        <label for="title">Post Title:</label>
+        <input id="title" name="title" type="text">
+
+        <label for="image">URL for your image:</label>
+        <input id="image" name="image" type="text">
+
+        <label for="address">What is the address of this location?:</label>
+        <input id="address" name="address" type="text">
+
+        <label for="postBody">What are your thoughts on this place?</label>
+        <input id="postBody" name="postBody" type="text">
+
+        <label for="rating">From 1(lowest) to 5(highest) , How would you rate this place?</label>
+        <input id="rating" name="rating" type="number">
+
+        <label for="countryName">What country is this location in?</label>
+        <select  id="countryName">
+            <% for(oneCountry of country){ %>
+                  <option value="<%= oneCountry.countryName %>"><%= oneCountry.countryName %></option>
+                <% } %>
+        </select>
+
+        <button> Create Post</button>
+    </form>
 </body>
 </html>
