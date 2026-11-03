@@ -9,7 +9,7 @@ router.get('/new',isSignedIn, async(req,res)=>{
 })
 
 router.post('/',isSignedIn, async (req,res)=>{
-    const {title , image, address, postBody, rating, country} = req.body
+    const {title , image, address, postBody, rating, countryName} = req.body
 const createdPost = await Post.create({
     title: title,
     image: image,
@@ -17,7 +17,7 @@ const createdPost = await Post.create({
     postBody: postBody,
     rating: rating,
     owner: req.session.user._id,
-    country: country
+    country: countryName
 })
 res.redirect('/Posts')
 })
@@ -28,7 +28,8 @@ res.render('posts/all-posts.ejs',{posts: allPosts})
 })
 
 router.get('/:postId', isSignedIn , async (req,res)=>{
-    const foundPost= await Post.findById(req.params.postId).populate('owner')
+    const foundPost= await Post.findById(req.params.postId).populate('owner country')
+    console.log(foundPost)
     res.render('posts/details.ejs',{post:foundPost})
 })
 

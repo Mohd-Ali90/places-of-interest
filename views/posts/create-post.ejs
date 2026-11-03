@@ -26,10 +26,10 @@
         <input id="rating" name="rating" type="number">
 
         <label for="countryName">What country is this location in?</label>
-        <select  id="countryName">
+        <select name="countryName" id="countryName">
             <% for(oneCountry of country){ %>
-                  <option value="<%= oneCountry.countryName %>"><%= oneCountry.countryName %></option>
-                <% } %>
+                  <option value="<%= oneCountry._id %>"><%= oneCountry.countryName %></option>
+            <% } %>
         </select>
 
         <button> Create Post</button>

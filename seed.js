@@ -1,7 +1,7 @@
 const mongoose = require('mongoose')
 const Country = require('./models/Country')
 
-const MONGO_URI = 'mongodb://localhost:27017/places-of-interestDB'
+const MONGO_URI = '***REMOVED***'
 
 const seedCountries=[ 
   {countryName: 'Afghanistan'}, 
