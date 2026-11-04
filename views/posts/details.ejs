@@ -15,6 +15,9 @@
         <img src="<%= post.image  %>" alt="Post-related image">
         <p>Address: <%= post.address %></p>
         <p>What I think about this place: <%= post.postBody %></p>
+         
+        <p>I give this place a rating of <%= post.rating %> out of 5 </p>
+
         <p> What country is this in?: <%= post.country.countryName %></p>  
         
         <% if(post.owner._id.equals(user._id)){ %>
