@@ -48,4 +48,12 @@ router.delete('/:postId', isSignedIn, async (req,res)=>{
         res.render('posts/edit-post.ejs',{post:foundPost, country:countries})
     })
 
+    router.put('/:postId' , isSignedIn , async (req,res)=>{
+        req.body.country = req.body.countryName
+    const updatedPost = await Post.findByIdAndUpdate(req.params.postId, req.body)
+        res.redirect('/posts')
+    
+    })
+    module.exports = router;
+
 module.exports = router;
