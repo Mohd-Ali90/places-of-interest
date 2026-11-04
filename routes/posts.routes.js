@@ -43,8 +43,9 @@ router.delete('/:postId', isSignedIn, async (req,res)=>{
 })
 
  router.get('/:postId/edit', isSignedIn , async (req,res)=>{
-        const foundPost = await Post.findById(req.params.postId)
-        res.render('posts/edit-post.ejs',{post:foundPost})
+        const foundPost = await Post.findById(req.params.postId).populate('country')
+        const countries = await Country.find()
+        res.render('posts/edit-post.ejs',{post:foundPost, country:countries})
     })
 
 module.exports = router;
