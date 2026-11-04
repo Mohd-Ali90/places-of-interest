@@ -42,4 +42,9 @@ router.delete('/:postId', isSignedIn, async (req,res)=>{
     res.redirect('/posts')
 })
 
+ router.get('/:postId/edit', isSignedIn , async (req,res)=>{
+        const foundPost = await Post.findById(req.params.postId)
+        res.render('posts/edit-post.ejs',{post:foundPost})
+    })
+
 module.exports = router;

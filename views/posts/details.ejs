@@ -21,6 +21,10 @@
             <form action="/posts/<%= post._id %>?_method=DELETE" method="post">
                 <button>Delete Post</button>
             </form>
+
+            <form action="/posts/<%= post._id%>/edit" method="get">
+                    <button>Edit Post</button>
+                </form>
             <% } %>
 </body>
 
