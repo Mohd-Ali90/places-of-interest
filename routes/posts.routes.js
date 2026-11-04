@@ -27,12 +27,6 @@ const allPosts = await Post.find().populate('owner')
 res.render('posts/all-posts.ejs',{posts: allPosts})
 })
 
-router.get('/:postId', isSignedIn , async (req,res)=>{
-    const foundPost= await Post.findById(req.params.postId).populate('owner country')
-    console.log(foundPost)
-    res.render('posts/details.ejs',{post:foundPost})
-})
-
 router.delete('/:postId', isSignedIn, async (req,res)=>{
     const foundPost =await Post.findById(req.params.postId)
     if (!foundPost.owner.equals(req.session.user._id)){
@@ -54,6 +48,15 @@ router.delete('/:postId', isSignedIn, async (req,res)=>{
         res.redirect('/posts')
     
     })
-    module.exports = router;
+
+router.get('/post-by-country',isSignedIn,async(req,res)=>{
+res.render('posts/post-by-country.ejs')
+})
+
+router.get('/:postId', isSignedIn , async (req,res)=>{
+    const foundPost= await Post.findById(req.params.postId).populate('owner country')
+    console.log(foundPost)
+    res.render('posts/details.ejs',{post:foundPost})
+})
 
 module.exports = router;
