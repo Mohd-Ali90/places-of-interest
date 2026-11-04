@@ -5,9 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>All posts page</title>
 </head>
-<%- include('../partials/navbar') %>
-<h1>All posts page</h1>
+
+
 <body>
+    <%- include('../partials/navbar') %>
+    <h1>All posts page</h1>
     <% for(let onePost of posts) { %>
         <p> <%= onePost.title  %> by <%= onePost.owner.username %> </p>
         <a href="/posts/<%= onePost._id  %>">See details of this post</a>

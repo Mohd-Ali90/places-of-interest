@@ -49,14 +49,21 @@ router.delete('/:postId', isSignedIn, async (req,res)=>{
     
     })
 
-router.get('/post-by-country',isSignedIn,async(req,res)=>{
-res.render('posts/post-by-country.ejs')
+router.get('/country-list',isSignedIn,async(req,res)=>{
+
+const uniqueIds = await Post.distinct('country');
+const fullObjects = await Post.find({ country: { $in: uniqueIds } }).populate('country');
+console.log(fullObjects)
+res.render('posts/country-list.ejs',{posts:fullObjects})
 })
 
 router.get('/:postId', isSignedIn , async (req,res)=>{
     const foundPost= await Post.findById(req.params.postId).populate('owner country')
-    console.log(foundPost)
     res.render('posts/details.ejs',{post:foundPost})
 })
 
+router.get('/by-country/:countryId', async (req,res)=>{
+    const postsForCountry = await Post.find({country: req.params.countryId}).populate('country')
+    res.render('posts/post-by-country.ejs',{posts: postsForCountry})
+})
 module.exports = router;

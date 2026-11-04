@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Country List</title>
+</head>
+<body>
+    <%- include('../partials/navbar') %>
+    <h1>All countries with posts</h1>
+
+    <% for(let onePost of posts){ %>
+        <a href="/posts/by-country/<%= onePost.country._id %>"> <%= onePost.country.countryName %></a>
+    <% } %>
+</body>
+</html>
