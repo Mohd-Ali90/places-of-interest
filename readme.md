@@ -34,16 +34,18 @@ Places of Interest - Travel/Tourism board
 
 ## Routes
 
-| Method | Route | Description |
-|---------|-------|-------------|
-| GET | / | Home page |
-| GET | /posts | List all posts |
-| GET | /post/new | New post form |
-| POST | /posts | Create post |
-| GET | /posts/:postId | View post |
-| GET | /posts/:postId/edit | Edit post form |
-| PUT | /posts/:postId | Update post |
-| DELETE | /posts/:postId | Delete post |
+| Method | Route                        | Description                        |
+|--------|------------------------------|------------------------------------|
+| GET    | /                            | Homepage                           |
+| GET    | /posts/new                   | New post form                      |
+| POST   | /posts                       | create post                        |
+| GET    | /posts                       | Show all posts                     |
+| DELETE | /posts/:postId               | Delete a post                      |
+| GET    | /posts/:postId/edit          | Edit post form                     |
+| PUT    | /posts/:postId               | Submit post edit                   |
+| GET    | /posts/country-list          | Show countries with existing posts |
+| GET    | /posts/:postId               | Show post details                  |
+| GET    | /posts/by-country/:countryId | Show posts for specefic country    |
 
 
 ## Features
