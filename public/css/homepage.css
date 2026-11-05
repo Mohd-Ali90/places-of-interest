@@ -1,0 +1,35 @@
+body{
+    text-align: center;
+}
+
+h1 {
+font-family: "Smooch Sans", sans-serif;
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: #1a1a1a;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+
+p{
+    font-family: "Smooch Sans", sans-serif;
+    font-weight: bold;
+}
+
+#bg-video {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -1;
+  object-fit: cover;
+}
+
+#homepage-text{
+ background-color: rgba(22, 185, 234, 0.734); 
+margin: 0 405px 0 405px;
+}
+
