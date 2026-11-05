@@ -1,15 +1,15 @@
-<nav>
+<nav class="nav-bar">
     
-    <a href="/">Homepage</a>
+    <a class="nav-item" href="/">Homepage</a>
     <% if (user){ %>
-    <a href="/auth/sign-out">Logout</a>
-    <a href="/posts/new">Create a New Post</a>
-    <a href="/posts/">Show All Posts</a>
-    <a href="/posts/country-list/">View posts for a specefic country</a>
+    <a class="nav-item" href="/auth/sign-out">Logout</a>
+    <a class="nav-item" href="/posts/new">Create a New Post</a>
+    <a class="nav-item" href="/posts/">Show All Posts</a>
+    <a class="nav-item" href="/posts/country-list/">View posts for a specefic country</a>
 
     <% } else{ %>
-    <a href="/auth/sign-up">Sign up</a>
-    <a href="/auth/sign-in">Login</a>
+    <a class="nav-item" href="/auth/sign-up">Sign up</a>
+    <a class="nav-item" href="/auth/sign-in">Login</a>
 
     <% } %>
     

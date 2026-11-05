@@ -1,0 +1,33 @@
+
+
+.nav-bar{
+  text-align: center;
+    font-size: larger;
+  gap: 15px;
+  padding: 10px 20px;
+background-color:#481520
+}
+
+.nav-item {
+  font-family: "Smooch Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 100;
+  display: inline-block;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 8px;
+  color: #3c3636;
+  
+  /* Purple-to-blue gradient */
+  background: linear-gradient(135deg, #667eea 0%, #818fc0 100%);
+  box-shadow: 0 4px 15px rgba(118, 75, 162, 0.3);
+  transition: all 0.3s ease;
+}
+
+.nav-item:hover {
+  /* Shifts to a warm pink-orange gradient */
+  background: linear-gradient(135deg, #607cc0 0%, #21385a 100%);
+  box-shadow: 0 6px 20px rgba(240, 157, 4, 0.5);
+  transform: translateY(-2px); /* Slight lift */
+}

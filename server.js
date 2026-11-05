@@ -43,20 +43,10 @@ app.use(
 app.use(passUserToView)
 
 
-
-
-
-
-
-
-
-
 // Routes go here
 app.use('/auth',authController)
 app.use('/',indexController)
 app.use('/posts',postController)
-
-
 
 
 // connect to database and listen on Port 3000
@@ -70,3 +60,4 @@ async function startServer() {
 }
 
 startServer();
+
