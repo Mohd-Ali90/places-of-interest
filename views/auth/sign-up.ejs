@@ -7,19 +7,34 @@
      <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Condensed:ital,wght@0,400..700;1,400..700&family=Smooch+Sans:wght@100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/css/navbar-style.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>    
+<link rel="stylesheet" href="/css/navbar-style.css">
+<link rel="stylesheet" href="/css/sign-up.css">
   </head>
   <body>
     <%- include('../partials/navbar') %>
-    <h1>Create a new account!</h1>
+    <h2>Create a new account!</h2>
+    
     <form action="/auth/sign-up" method="post">
+
+      <div class="form-group">
       <label for="username">Username:</label>
       <input type="text" name="username" id="username" />
+      </div>
+
+      <div class="form-group">
       <label for="password">Password:</label>
       <input type="password" name="password" id="password" />
+      </div>
+
+      <div class="form-group">
       <label for="confirmPassword">Confirm Password:</label>
       <input type="password" name="confirmPassword" id="confirmPassword" />
-      <button type="submit">Sign up</button>
+      </div>
+
+      <button type="submit" class="btn btn-default">Sign up</button>
     </form>
   </body>
 </html>

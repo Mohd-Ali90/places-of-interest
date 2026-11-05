@@ -14,6 +14,8 @@ Places of Interest - Travel/Tourism board
 1. Mongo DB
 2. Express.js
 3. Node.js
+4. Google API Jquery
+5. Bootstrap 3
 
 ## Getting Started
 
@@ -58,5 +60,6 @@ Places of Interest - Travel/Tourism board
 
 ## Credits
 1. https://gist.github.com/keeguon/2310008 Used for list of countries
-2. https://www.w3schools.com/tags/tag_option.asp used for options tag
+2. https://www.w3schools.com
 3. https://pixabay.com/videos/waterfall-river-view-nature-that-356398/ homepage background video by Engin_Akyurt
+4. https://pixabay.com/photos/autumn-lake-trees-reflection-10545288/ autumn background for sign up by fietzfotos
