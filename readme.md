@@ -21,14 +21,14 @@ Places of Interest - Travel/Tourism board
 
 
 ## User Stories
-1. as a user , I should be able to create a posting about a location
-2. as a user, I should be able to view all location postings
-3. as a user , I should be able to list my postings
-4. as a user, I should be able to list the postings based on the associated country
-5. as a user , I should be able to update my posting
-6. as a user , I should be able to delete my posting
-7. as a user, I should be able to put a rating for a post
-8. as a user, I should be able to add an image for a post
+1. As a user , I should be able to create a posting about a location.
+2. As a user, I should be able to view all location postings.
+3. As a user , I should be able to list my postings.
+4. As a user, I should be able to list the postings based on the associated country.
+5. As a user , I should be able to update my posting.
+6. As a user , I should be able to delete my posting.
+7. As a user, I should be able to put a rating for a post.
+8. As a user, I should be able to add an image for a post.
 
 ## Database Design
 
