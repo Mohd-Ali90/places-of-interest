@@ -15,21 +15,30 @@
 </head>
 <body>
     <%- include('../partials/navbar') %>
-    <h1>Create New Post</h1>
+    <h2>Create New Post</h2>
 
     <form action="/posts" method="post">
+        <div class="form-group">
         <label for="title">Post Title:</label>
         <input id="title" name="title" type="text">
+        </div>
 
+        <div class="form-group">
         <label for="image">URL for your image:</label>
         <input id="image" name="image" type="text">
-
+        </div>
+         
+        <div class="form-group">
         <label for="address">What is the address of this location?:</label>
         <input id="address" name="address" type="text">
+         </div>
 
+         <div class="form-group">
         <label for="postBody">What are your thoughts on this place?</label>
         <input id="postBody" name="postBody" type="text">
+         </div>
 
+         <div class="form-group">
         <label for="rating">From 1(lowest) to 5(highest) , How would you rate this place?</label>
         <input type="radio" id="star1" name="rating" value="1">
         <label for="star1">1</label>
@@ -45,16 +54,18 @@
 
         <input type="radio" id="star5" name="rating" value="1">
         <label for="star5">5</label>
+        </div>
 
-
+        <div class="form-group">
         <label for="countryName">What country is this location in?</label>
         <select name="countryName" id="countryName">
             <% for(oneCountry of country){ %>
                   <option value="<%= oneCountry._id %>"><%= oneCountry.countryName %></option>
             <% } %>
         </select>
+         </div>
 
-        <button> Create Post</button>
+        <button class="btn btn-default"> Create Post</button>
     </form>
 </body>
 </html>
