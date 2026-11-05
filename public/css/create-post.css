@@ -1,0 +1,17 @@
+body{
+    font-family: "Smooch Sans", sans-serif;
+}
+
+.form-group{
+    font-size:25px;
+    margin-left: 25px;
+}
+
+h2{
+    size:larger;
+    margin-left:25px;
+}
+
+.btn{
+    margin-left:25px;
+}

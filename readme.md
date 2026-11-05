@@ -14,7 +14,7 @@ Places of Interest - Travel/Tourism board
 1. Mongo DB
 2. Express.js
 3. Node.js
-4. Google API Jquery
+4. jQuery
 5. Bootstrap 3
 
 ## Getting Started
