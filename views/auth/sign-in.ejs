@@ -7,17 +7,29 @@
      <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Condensed:ital,wght@0,400..700;1,400..700&family=Smooch+Sans:wght@100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/css/navbar-style.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>       
+<link rel="stylesheet" href="/css/navbar-style.css">
+<link rel="stylesheet" href="/css/sign-in.css">
+
   </head>
   <body>
     <%- include('../partials/navbar') %>
-    <h1>Sign in</h1>
+    <h2>Sign in</h2>
+
     <form action="/auth/sign-in" method="POST">
+      <div class="form-group">
       <label for="username">Username:</label>
       <input type="text" name="username" id="username" />
+      </div>
+
+      <div class="form-group">
       <label for="password">Password:</label>
       <input type="password" name="password" id="password" />
-      <button type="submit">Sign in</button>
+      </div>
+
+      <button type="submit" class="btn btn-default">Sign in</button>
     </form>
   </body>
 </html>
