@@ -1,0 +1,30 @@
+body{
+    font-family: "Smooch Sans", sans-serif;
+    background-color:snow;
+}
+
+.form-group{
+    font-size:25px;
+    margin-left: 25px;
+}
+
+h2{
+    size:larger;
+    margin-left:25px;
+}
+
+.btn{
+    margin-left:25px;
+}
+
+#image{
+    field-sizing: content;
+    min-width: 100px;
+    max-width: 100%;
+}
+
+#postBody{
+    width:80%;
+    padding:20px 40px;
+    box-sizing: border-box;
+}
