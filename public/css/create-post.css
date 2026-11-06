@@ -1,5 +1,6 @@
 body{
     font-family: "Smooch Sans", sans-serif;
+    background-color: lavender;
 }
 
 .form-group{
@@ -14,4 +15,16 @@ h2{
 
 .btn{
     margin-left:25px;
+}
+
+#image{
+    field-sizing: content;
+    min-width: 100px;
+    max-width: 100%;
+}
+
+#postBody{
+    width:80%;
+    padding:20px 40px;
+    box-sizing: border-box;
 }
