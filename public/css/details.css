@@ -1,0 +1,26 @@
+#image{
+    margin-left: 25px;
+  border: 2px solid #3d2b1f; 
+  padding: 8px; 
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3); 
+
+}
+
+body{
+    font-family: "Smooch Sans", sans-serif;
+    background-color: snow;
+}
+
+.form-group{
+    font-size:25px;
+    margin-left: 25px;
+}
+
+h2{
+    size:larger;
+    margin-left:25px;
+}
+
+.btn{
+    margin-left:25px;
+}

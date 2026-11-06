@@ -9,28 +9,44 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Condensed:ital,wght@0,400..700;1,400..700&family=Smooch+Sans:wght@100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/navbar-style.css">
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="/css/details.css">
 </head>
 
 <body>
     <%- include('../partials/navbar') %>
-        <h1>Post Details</h1>
-
+        <h2>Post Details</h2>
+         <div class="form-group">
         <p> Title: <%= post.title %></p>
-        <img src="<%= post.image  %>" alt="Post-related image">
-        <p>Address: <%= post.address %></p>
-        <p>What I think about this place: <%= post.postBody %></p>
-         
-        <p>I give this place a rating of <%= post.rating %> out of 5 </p>
+        </div>
 
-        <p> What country is this in?: <%= post.country.countryName %></p>  
+        <img id="image" src="<%= post.image  %>" alt="Post-related image">
+
+        <div class="form-group">
+        <p>Address: <%= post.address %></p>
+        </div>
+
+        <div class="form-group">
+        <p>What I think about this place: <%= post.postBody %></p>
+        </div>
+         
+        <div class="form-group">
+        <p>I give this place a rating of <%= post.rating %> out of 5 </p>
+        </div>
         
+        <div class="form-group">
+        <p> What country is this in?: <%= post.country.countryName %></p>  
+        </div>
+
         <% if(post.owner._id.equals(user._id)){ %>
             <form action="/posts/<%= post._id %>?_method=DELETE" method="post">
-                <button>Delete Post</button>
+                <button class="btn btn-default">Delete Post</button>
             </form>
 
             <form action="/posts/<%= post._id%>/edit" method="get">
-                    <button>Edit Post</button>
+                    <button class="btn btn-default">Edit Post</button>
                 </form>
             <% } %>
 </body>
