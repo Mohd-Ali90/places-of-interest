@@ -50,11 +50,26 @@ router.delete('/:postId', isSignedIn, async (req,res)=>{
     })
 
 router.get('/country-list',isSignedIn,async(req,res)=>{
+// Group posts by country to ensure uniqueness, and grab the first post document for each
+const fullObjects = await Post.aggregate([
+  {
+    $group: {
+      _id: '$country', // Groups by the country ID field
+      post: { $first: '$$ROOT' } // Keeps the first full post document found for each country
+    }
+  },
+  {
+    $replaceRoot: { newRoot: '$post' } // Promotes the post document back to the top level
+  }
+]);
 
-const uniqueIds = await Post.distinct('country');
-const fullObjects = await Post.find({ country: { $in: uniqueIds } }).populate('country');
-console.log(fullObjects)
-res.render('posts/country-list.ejs',{posts:fullObjects})
+// Since Mongoose .aggregate() returns plain objects, populate the country field manually
+await Post.populate(fullObjects, { path: 'country' });
+
+console.log(fullObjects);
+res.render('posts/country-list.ejs', { posts: fullObjects });
+
+
 })
 
 router.get('/:postId', isSignedIn , async (req,res)=>{
@@ -67,3 +82,10 @@ router.get('/by-country/:countryId', async (req,res)=>{
     res.render('posts/post-by-country.ejs',{posts: postsForCountry})
 })
 module.exports = router;
+
+// older code for the country-list route
+
+// const uniqueIds = await Post.distinct('country');
+// const fullObjects = await Post.find({ country: { $in: uniqueIds } }).populate('country');
+// console.log(fullObjects)
+// res.render('posts/country-list.ejs',{posts:fullObjects})

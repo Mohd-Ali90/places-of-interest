@@ -11,9 +11,11 @@
 </head>
 <body>
      <%- include('../partials/navbar') %>
-     
+   
+     <% if (posts.length > 0) { %>
+  <h1>All posts for <%= posts[0].country.countryName %></h1>
+  <% } %>
     <% for(let onePost of posts){ %>
-        <h1>All posts for <%= onePost.country.countryName%></h1>
         <a href="/posts/<%= onePost._id  %>"><%= onePost.title%></a>
     <% } %>
 
