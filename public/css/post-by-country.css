@@ -21,8 +21,8 @@ body{
 }
 
 .tile:hover {
-    transform: translateY(-5px);       /* Moves the tile up by 5 pixels */
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1); /* Makes the shadow softer and larger */
+    transform: translateY(-5px);       
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1); 
 }
         
 

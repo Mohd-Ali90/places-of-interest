@@ -27,5 +27,5 @@ background-color:#481520
   text-decoration: none;
   background: linear-gradient(135deg, #607cc0 0%, #21385a 100%);
   box-shadow: 0 6px 20px rgba(240, 157, 4, 0.5);
-  transform: translateY(-2px); /* Slight lift */
+  transform: translateY(-2px); 
 }
