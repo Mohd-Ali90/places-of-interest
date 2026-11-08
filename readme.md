@@ -58,7 +58,7 @@ CAUTION: In line 4 you can enter a Mongo URI so that you can push the country na
 
 
 ## Features
-
+1. Animations implemented on pages for post details and all posts using lottie-wc.js
 
 
 ## Future Enhancements
@@ -73,4 +73,5 @@ CAUTION: In line 4 you can enter a Mongo URI so that you can push the country na
 5. https://pixabay.com/photos/mountains-snow-capped-peak-nature-10412381/ snow mountain background by AyşegülAytören
 6. https://finsweet.com/lottieflow/download/chat-17-5 sppech bubble animation from lottieflow used on all-posts.ejs
 7. https://finsweet.com/lottieflow/download/chat-17-10 edit animation from lottieflow used in details.ejs
+8.  https://finsweet.com/lottieflow/download/chat-17-11 del animation from lottieflow used in details.ejs
 
