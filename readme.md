@@ -3,11 +3,14 @@ Places of Interest - Travel/Tourism board
 
 
 ## Overview
-
+Have you ever vistied a location or destination and wanted to share information about the place or your experience with others?
+With Places of interest you can make a posts about your favorite locations that include an image , details about the address , your thoughts and the country in which that place is located. 
 
 
 ## Screenshots
+![image of the create post page](image-1.png)
 
+![image of a post with an image and some text](image-2.png)
 
 
 ## Technologies Used
@@ -18,12 +21,16 @@ Places of Interest - Travel/Tourism board
 5. Bootstrap 3
 
 ## Getting Started
-
+1. Use 'git clone https://github.com/Mohd-Ali90/places-of-interest.git' to clone the git repository
+2. Use 'npm i' to install the required project dependencies
+3. With seed.js , you can add the country names to the country database so that the list has 243 available countries.
+CAUTION: In line 4 you can enter a Mongo URI so that you can push the country names to the country model in the deployed app link , PLEASE MAKE SURE TO REMOVE THE SEED.JS FILE OR ERASE YOUR URI BEFORE GIT ADD OR GIT COMMIT.
+4. With nodemon server.js you can test the web app locallly.
 
 ## User Stories
 1. As a user , I should be able to create a posting about a location.
-2. As a user, I should be able to view all location postings.
-3. As a user , I should be able to list my postings.
+2. As a user, I should be able to view all postings.
+3. As a user , I should be able to edit my postings.
 4. As a user, I should be able to list the postings based on the associated country.
 5. As a user , I should be able to update my posting.
 6. As a user , I should be able to delete my posting.
