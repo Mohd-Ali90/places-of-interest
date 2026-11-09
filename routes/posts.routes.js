@@ -6,20 +6,30 @@ const Country = require('../models/Country')
 router.get('/new',isSignedIn, async(req,res)=>{
     const countries = await Country.find()
     res.render('posts/create-post.ejs',{country:countries})
+    
 })
 
-router.post('/',isSignedIn, async (req,res)=>{
-    const {title , image, address, postBody, rating, countryName} = req.body
-const createdPost = await Post.create({
-    title: title,
-    image: image,
-    address: address,
-    postBody: postBody,
-    rating: rating,
-    owner: req.session.user._id,
-    country: countryName
-})
-res.redirect('/Posts')
+router.post('/', isSignedIn, async (req, res) => {
+    const { title, image, address, postBody, rating, countryName } = req.body
+    try {
+    const createdPost = await Post.create({
+        title: title,
+        image: image,
+        address: address,
+        postBody: postBody,
+        rating: rating,
+        owner: req.session.user._id,
+        country: countryName
+    })
+       res.redirect('/Posts')
+    } catch(error){
+ if (error.name === 'ValidationError') {
+      const firstKey = Object.keys(error.errors)[0];
+      const specificMessage = error.errors[firstKey].message;
+
+      return res.status(400).send('The title and address fields are required');
+    }
+}
 })
 
 router.get('/',isSignedIn,async(req,res)=>{
