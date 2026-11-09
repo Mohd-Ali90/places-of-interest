@@ -65,6 +65,7 @@ CAUTION: In line 4 you can enter a Mongo URI so that you can push the country na
 1. Admin mmode- would be useful to moderate in the event that more people are posting.
 2. Image file upload or allowing to scroll through multiple images on 1 post.
 3. Post reply feature.
+4. Mobile-friendly version.
 
 
 ## Credits
